@@ -1,0 +1,17 @@
+{
+  "country": "SG",
+  "rules": [
+    {
+      "rule_id": "SG-docs",
+      "description": "Example fourth country document rule",
+      "rule_type": "document_requirement",
+      "parameters": {
+        "base": [
+          "medical_receipt"
+        ],
+        "by_claim_type": {}
+      },
+      "effective_date": "2024-01-01"
+    }
+  ]
+}

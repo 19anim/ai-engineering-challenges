@@ -1,0 +1,66 @@
+{
+  "country": "TH",
+  "rules": [
+    {
+      "rule_id": "TH-docs",
+      "description": "Required documents",
+      "rule_type": "document_requirement",
+      "parameters": {
+        "base": [
+          "medical_receipt"
+        ],
+        "by_claim_type": {
+          "INPATIENT": [
+            "discharge_summary"
+          ],
+          "OUTPATIENT": [
+            "prescription"
+          ]
+        }
+      },
+      "effective_date": "2024-01-01"
+    },
+    {
+      "rule_id": "TH-sla",
+      "description": "Processing SLA",
+      "rule_type": "sla_check",
+      "parameters": {
+        "OUTPATIENT": 15,
+        "INPATIENT": 30,
+        "DENTAL": 15,
+        "MATERNITY": 15
+      },
+      "effective_date": "2024-01-01"
+    },
+    {
+      "rule_id": "TH-wait",
+      "description": "Waiting period",
+      "rule_type": "waiting_period",
+      "parameters": {
+        "general": 30,
+        "pre_existing": 120
+      },
+      "effective_date": "2024-01-01"
+    },
+    {
+      "rule_id": "TH-mask",
+      "description": "Mask national ID",
+      "rule_type": "data_masking",
+      "parameters": {
+        "field": "national_id",
+        "mode": "last4"
+      },
+      "effective_date": "2024-01-01"
+    },
+    {
+      "rule_id": "TH-emergency",
+      "description": "Emergency mandate",
+      "rule_type": "coverage_mandate",
+      "parameters": {
+        "claim_type": "EMERGENCY",
+        "must_cover": true
+      },
+      "effective_date": "2024-01-01"
+    }
+  ]
+}

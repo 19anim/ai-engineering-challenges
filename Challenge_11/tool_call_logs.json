@@ -1,0 +1,199 @@
+[
+  [
+    {
+      "tool": "verifyDocument",
+      "input": "D1",
+      "output": {
+        "document_type": "receipt",
+        "complete": true,
+        "issues": []
+      }
+    },
+    {
+      "tool": "verifyDocument",
+      "input": "D2",
+      "output": {
+        "document_type": "prescription",
+        "complete": true,
+        "issues": []
+      }
+    },
+    {
+      "tool": "lookupPolicy",
+      "input": "POL-A",
+      "output": {
+        "active": true,
+        "member": "MBR-1",
+        "coverage": [
+          "OUTPATIENT"
+        ],
+        "limit": 20000,
+        "copay": 0.2,
+        "effective": "2024-01-01",
+        "expiry": "2024-12-31",
+        "clauses": {
+          "coverage": "C1 outpatient covered",
+          "limit": "C2 annual outpatient limit",
+          "documents": "C3 receipts and prescriptions required"
+        }
+      }
+    },
+    {
+      "tool": "checkMedicalNecessity",
+      "input": {
+        "diagnosis": "acute bronchitis",
+        "procedures": [
+          "P1"
+        ]
+      },
+      "output": {
+        "appropriate": true,
+        "reason": "Treatment is mapped to diagnosis"
+      }
+    },
+    {
+      "tool": "calculateBenefit",
+      "input": {
+        "policy_id": "POL-A",
+        "claim_type": "OUTPATIENT",
+        "amount": 10000
+      },
+      "output": {
+        "submitted_amount": 10000,
+        "covered_amount": 8000.0,
+        "copay": 2000.0,
+        "remaining_limit": 10000
+      }
+    }
+  ],
+  [
+    {
+      "tool": "verifyDocument",
+      "input": "D1",
+      "output": {
+        "document_type": "receipt",
+        "complete": true,
+        "issues": []
+      }
+    },
+    {
+      "tool": "lookupPolicy",
+      "input": "POL-B",
+      "output": {
+        "active": true,
+        "member": "MBR-2",
+        "coverage": [
+          "DENTAL"
+        ],
+        "limit": 5000,
+        "copay": 0.3,
+        "effective": "2024-01-01",
+        "expiry": "2024-12-31",
+        "exclusions": [
+          "cosmetic"
+        ],
+        "clauses": {
+          "exclusion": "E1 cosmetic dental excluded",
+          "documents": "E2 dental receipt required"
+        }
+      }
+    },
+    {
+      "tool": "checkMedicalNecessity",
+      "input": {
+        "diagnosis": "cosmetic whitening",
+        "procedures": [
+          "P9"
+        ]
+      },
+      "output": {
+        "appropriate": false,
+        "reason": "Cosmetic treatment is not medically necessary"
+      }
+    },
+    {
+      "tool": "calculateBenefit",
+      "input": {
+        "policy_id": "POL-B",
+        "claim_type": "DENTAL",
+        "amount": 8000
+      },
+      "output": {
+        "submitted_amount": 8000,
+        "covered_amount": 3500.0,
+        "copay": 1500.0,
+        "remaining_limit": 0
+      }
+    }
+  ],
+  [
+    {
+      "tool": "verifyDocument",
+      "input": "D3",
+      "output": {
+        "document_type": "receipt",
+        "complete": false,
+        "issues": [
+          "image is blurry and total is unreadable"
+        ]
+      }
+    },
+    {
+      "tool": "verifyDocument",
+      "input": "DX",
+      "output": {
+        "document_type": "missing",
+        "complete": false,
+        "issues": [
+          "document not submitted"
+        ]
+      }
+    },
+    {
+      "tool": "lookupPolicy",
+      "input": "POL-C",
+      "output": {
+        "active": true,
+        "member": "MBR-3",
+        "coverage": [
+          "INPATIENT"
+        ],
+        "limit": 100000,
+        "copay": 0,
+        "effective": "2024-01-01",
+        "expiry": "2024-12-31",
+        "clauses": {
+          "documents": "D1 inpatient discharge summary and receipt required",
+          "limit": "D2 inpatient limit"
+        }
+      }
+    },
+    {
+      "tool": "checkMedicalNecessity",
+      "input": {
+        "diagnosis": "appendicitis",
+        "procedures": [
+          "SURG1"
+        ]
+      },
+      "output": {
+        "appropriate": true,
+        "reason": "Treatment is mapped to diagnosis"
+      }
+    },
+    {
+      "tool": "calculateBenefit",
+      "input": {
+        "policy_id": "POL-C",
+        "claim_type": "INPATIENT",
+        "amount": 50000
+      },
+      "output": {
+        "submitted_amount": 50000,
+        "covered_amount": 50000,
+        "copay": 0,
+        "remaining_limit": 50000
+      }
+    }
+  ]
+]

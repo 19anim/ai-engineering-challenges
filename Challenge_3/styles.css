@@ -1,0 +1,74 @@
+:root {
+  --blue: #2563eb;
+  --green: #10b981;
+  --red: #ef4444;
+  --ink: #172033;
+  --line: #d8dee9;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    sans-serif;
+  background: #eef3f8;
+  color: var(--ink);
+}
+header {
+  padding: 24px clamp(16px, 4vw, 48px);
+  background: white;
+  border-bottom: 1px solid var(--line);
+}
+main {
+  padding: 24px;
+}
+.email {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  border: 1px solid var(--line);
+}
+.head {
+  padding: 22px;
+  background: var(--blue);
+  color: white;
+  font-weight: 800;
+}
+.body {
+  padding: 24px;
+  line-height: 1.55;
+}
+.footer {
+  padding: 18px;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 13px;
+}
+.amount {
+  font-size: 32px;
+  color: var(--green);
+  font-weight: 900;
+}
+.bad {
+  border-left: 4px solid var(--red);
+  background: #fef2f2;
+  padding: 14px;
+}
+select {
+  font: inherit;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+@media (max-width: 640px) {
+  main {
+    padding: 12px;
+  }
+  .body {
+    padding: 18px;
+  }
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "approval",
+    "policy_id": "POL-A",
+    "member_id": "MBR-1",
+    "claim_type": "OUTPATIENT",
+    "amount": 10000,
+    "diagnosis": "acute bronchitis",
+    "procedures": [
+      "P1"
+    ],
+    "treatment_date": "2024-03-15",
+    "documents": [
+      "D1",
+      "D2"
+    ],
+    "expected": "APPROVE"
+  },
+  {
+    "id": "rejection",
+    "policy_id": "POL-B",
+    "member_id": "MBR-2",
+    "claim_type": "DENTAL",
+    "amount": 8000,
+    "diagnosis": "cosmetic whitening",
+    "procedures": [
+      "P9"
+    ],
+    "treatment_date": "2024-04-10",
+    "documents": [
+      "D1"
+    ],
+    "expected": "REJECT"
+  },
+  {
+    "id": "request_more_info",
+    "policy_id": "POL-C",
+    "member_id": "MBR-3",
+    "claim_type": "INPATIENT",
+    "amount": 50000,
+    "diagnosis": "appendicitis",
+    "procedures": [
+      "SURG1"
+    ],
+    "treatment_date": "2024-05-01",
+    "documents": [
+      "D3"
+    ],
+    "missing_documents": [
+      "DX"
+    ],
+    "expected": "REQUEST_MORE_INFO"
+  }
+]

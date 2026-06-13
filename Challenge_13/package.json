@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --test dist/tests/*.test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.3",
+    "typescript": "latest"
+  }
+}

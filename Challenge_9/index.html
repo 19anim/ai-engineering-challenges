@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Claims Analytics</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Claims Analytics Dashboard</h1>
+      <div class="toolbar">
+        <input id="from" type="date" /><input id="to" type="date" /><select
+          id="type"
+        ></select
+        ><select id="status"></select
+        ><select id="insurer"></select
+        ><select id="country"></select
+        ><button id="exportBtn">Export CSV</button>
+      </div>
+    </header>
+    <main>
+      <section id="kpis" class="kpis"></section>
+      <section id="charts" class="charts"></section>
+      <table id="tbl"></table>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

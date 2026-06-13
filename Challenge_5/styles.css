@@ -1,0 +1,72 @@
+:root {
+  --ink: #172033;
+  --muted: #64748b;
+  --line: #d8dee9;
+  --green: #10b981;
+  --amber: #f59e0b;
+  --red: #ef4444;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    sans-serif;
+  background: #eef3f8;
+  color: var(--ink);
+}
+header,
+main {
+  padding: 24px clamp(16px, 4vw, 48px);
+}
+header {
+  background: white;
+  border-bottom: 1px solid var(--line);
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 16px;
+}
+.card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 12px 0;
+}
+.quick {
+  border-left: 5px solid var(--green);
+}
+.warn {
+  border-left: 5px solid var(--amber);
+  background: #fffaf0;
+}
+.bad {
+  border-left: 5px solid var(--red);
+  background: #fff5f5;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+td,
+th {
+  border-bottom: 1px solid var(--line);
+  padding: 10px;
+  text-align: left;
+}
+select {
+  font: inherit;
+  padding: 8px;
+}
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}

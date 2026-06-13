@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    sans-serif;
+  background: #eef3f8;
+  color: #172033;
+}
+header,
+main {
+  padding: 24px clamp(16px, 4vw, 48px);
+}
+header {
+  background: white;
+  border-bottom: 1px solid #d8dee9;
+}
+#steps {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+#steps span {
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: #dbeafe;
+}
+#steps .active {
+  background: #2563eb;
+  color: white;
+}
+#content {
+  background: white;
+  border: 1px solid #d8dee9;
+  border-radius: 8px;
+  padding: 18px;
+  max-width: 900px;
+}
+input,
+textarea,
+button {
+  font: inherit;
+  margin: 6px 0;
+  padding: 10px;
+  border: 1px solid #d8dee9;
+  border-radius: 6px;
+}
+textarea {
+  display: block;
+  width: 100%;
+  min-height: 90px;
+}
+label {
+  display: block;
+}
+.doc {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid #edf2f7;
+  padding: 10px 0;
+}
+button {
+  background: #2563eb;
+  color: white;
+}
+#prev {
+  background: white;
+  color: #2563eb;
+}
+@media (max-width: 720px) {
+  .doc {
+    display: block;
+  }
+}

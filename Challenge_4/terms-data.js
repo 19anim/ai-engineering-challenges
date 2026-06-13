@@ -1,0 +1,296 @@
+window.GLOSSARY_TERMS = [
+  {
+    name: "Premium",
+    category: "General Insurance",
+    definition:
+      "Premium is an insurance term used in general insurance decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Policyholder", "Underwriting"],
+  },
+  {
+    name: "Policyholder",
+    category: "General Insurance",
+    definition:
+      "Policyholder is an insurance term used in general insurance decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Premium", "Underwriting", "Endorsement"],
+  },
+  {
+    name: "Underwriting",
+    category: "General Insurance",
+    definition:
+      "Underwriting is an insurance term used in general insurance decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Policyholder", "Endorsement", "Rider"],
+  },
+  {
+    name: "Endorsement",
+    category: "General Insurance",
+    definition:
+      "Endorsement is an insurance term used in general insurance decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Underwriting", "Rider", "Insurer"],
+  },
+  {
+    name: "Rider",
+    category: "General Insurance",
+    definition:
+      "Rider is an insurance term used in general insurance decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Endorsement", "Insurer", "Broker"],
+  },
+  {
+    name: "Insurer",
+    category: "General Insurance",
+    definition:
+      "Insurer is an insurance term used in general insurance decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Rider", "Broker"],
+  },
+  {
+    name: "Broker",
+    category: "General Insurance",
+    definition:
+      "Broker is an insurance term used in general insurance decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Insurer"],
+  },
+  {
+    name: "Claim",
+    category: "Claims",
+    definition:
+      "Claim is an insurance term used in claims decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Deductible", "Copay"],
+  },
+  {
+    name: "Deductible",
+    category: "Claims",
+    definition:
+      "Deductible is an insurance term used in claims decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Claim", "Copay", "Coinsurance"],
+  },
+  {
+    name: "Copay",
+    category: "Claims",
+    definition:
+      "Copay is an insurance term used in claims decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Deductible", "Coinsurance", "Adjudication"],
+  },
+  {
+    name: "Coinsurance",
+    category: "Claims",
+    definition:
+      "Coinsurance is an insurance term used in claims decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Copay", "Adjudication", "Subrogation"],
+  },
+  {
+    name: "Adjudication",
+    category: "Claims",
+    definition:
+      "Adjudication is an insurance term used in claims decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Coinsurance", "Subrogation", "Loss Adjuster"],
+  },
+  {
+    name: "Subrogation",
+    category: "Claims",
+    definition:
+      "Subrogation is an insurance term used in claims decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Adjudication", "Loss Adjuster"],
+  },
+  {
+    name: "Loss Adjuster",
+    category: "Claims",
+    definition:
+      "Loss Adjuster is an insurance term used in claims decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Subrogation"],
+  },
+  {
+    name: "Sum Insured",
+    category: "Coverage",
+    definition:
+      "Sum Insured is an insurance term used in coverage decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Annual Limit", "Sub-limit"],
+  },
+  {
+    name: "Annual Limit",
+    category: "Coverage",
+    definition:
+      "Annual Limit is an insurance term used in coverage decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Sum Insured", "Sub-limit", "Exclusion"],
+  },
+  {
+    name: "Sub-limit",
+    category: "Coverage",
+    definition:
+      "Sub-limit is an insurance term used in coverage decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Annual Limit", "Exclusion", "Waiting Period"],
+  },
+  {
+    name: "Exclusion",
+    category: "Coverage",
+    definition:
+      "Exclusion is an insurance term used in coverage decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Sub-limit", "Waiting Period", "Pre-existing Condition"],
+  },
+  {
+    name: "Waiting Period",
+    category: "Coverage",
+    definition:
+      "Waiting Period is an insurance term used in coverage decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Exclusion", "Pre-existing Condition", "Network Provider"],
+  },
+  {
+    name: "Pre-existing Condition",
+    category: "Coverage",
+    definition:
+      "Pre-existing Condition is an insurance term used in coverage decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Waiting Period", "Network Provider"],
+  },
+  {
+    name: "Network Provider",
+    category: "Coverage",
+    definition:
+      "Network Provider is an insurance term used in coverage decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Pre-existing Condition"],
+  },
+  {
+    name: "Beneficiary",
+    category: "Life & Health",
+    definition:
+      "Beneficiary is an insurance term used in life & health decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Maturity", "Surrender Value"],
+  },
+  {
+    name: "Maturity",
+    category: "Life & Health",
+    definition:
+      "Maturity is an insurance term used in life & health decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Beneficiary", "Surrender Value", "Mortality Table"],
+  },
+  {
+    name: "Surrender Value",
+    category: "Life & Health",
+    definition:
+      "Surrender Value is an insurance term used in life & health decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Maturity", "Mortality Table", "Actuarial"],
+  },
+  {
+    name: "Mortality Table",
+    category: "Life & Health",
+    definition:
+      "Mortality Table is an insurance term used in life & health decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Surrender Value", "Actuarial", "Grace Period"],
+  },
+  {
+    name: "Actuarial",
+    category: "Life & Health",
+    definition:
+      "Actuarial is an insurance term used in life & health decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Mortality Table", "Grace Period", "Medical Underwriting"],
+  },
+  {
+    name: "Grace Period",
+    category: "Life & Health",
+    definition:
+      "Grace Period is an insurance term used in life & health decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Actuarial", "Medical Underwriting"],
+  },
+  {
+    name: "Medical Underwriting",
+    category: "Life & Health",
+    definition:
+      "Medical Underwriting is an insurance term used in life & health decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Grace Period"],
+  },
+  {
+    name: "Ceding Company",
+    category: "Reinsurance",
+    definition:
+      "Ceding Company is an insurance term used in reinsurance decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Retrocession", "Treaty"],
+  },
+  {
+    name: "Retrocession",
+    category: "Reinsurance",
+    definition:
+      "Retrocession is an insurance term used in reinsurance decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Ceding Company", "Treaty", "Facultative"],
+  },
+  {
+    name: "Treaty",
+    category: "Reinsurance",
+    definition:
+      "Treaty is an insurance term used in reinsurance decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Retrocession", "Facultative", "Loss Ratio"],
+  },
+  {
+    name: "Facultative",
+    category: "Reinsurance",
+    definition:
+      "Facultative is an insurance term used in reinsurance decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Treaty", "Loss Ratio", "Retention"],
+  },
+  {
+    name: "Loss Ratio",
+    category: "Reinsurance",
+    definition:
+      "Loss Ratio is an insurance term used in reinsurance decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Facultative", "Retention", "Quota Share"],
+  },
+  {
+    name: "Retention",
+    category: "Reinsurance",
+    definition:
+      "Retention is an insurance term used in reinsurance decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Loss Ratio", "Quota Share"],
+  },
+  {
+    name: "Quota Share",
+    category: "Reinsurance",
+    definition:
+      "Quota Share is an insurance term used in reinsurance decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Retention"],
+  },
+  {
+    name: "Solvency",
+    category: "Regulatory",
+    definition:
+      "Solvency is an insurance term used in regulatory decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Reserve", "IBNR"],
+  },
+  {
+    name: "Reserve",
+    category: "Regulatory",
+    definition:
+      "Reserve is an insurance term used in regulatory decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Solvency", "IBNR", "Statutory Reporting"],
+  },
+  {
+    name: "IBNR",
+    category: "Regulatory",
+    definition:
+      "IBNR is an insurance term used in regulatory decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Reserve", "Statutory Reporting", "Compliance"],
+  },
+  {
+    name: "Statutory Reporting",
+    category: "Regulatory",
+    definition:
+      "Statutory Reporting is an insurance term used in regulatory decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["IBNR", "Compliance", "Capital Adequacy"],
+  },
+  {
+    name: "Compliance",
+    category: "Regulatory",
+    definition:
+      "Compliance is an insurance term used in regulatory decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Statutory Reporting", "Capital Adequacy", "Data Privacy"],
+  },
+  {
+    name: "Capital Adequacy",
+    category: "Regulatory",
+    definition:
+      "Capital Adequacy is an insurance term used in regulatory decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Compliance", "Data Privacy"],
+  },
+  {
+    name: "Data Privacy",
+    category: "Regulatory",
+    definition:
+      "Data Privacy is an insurance term used in regulatory decisions. It affects how policies are priced, administered, assessed, or reported, and should be interpreted together with policy wording and local regulations.",
+    related: ["Capital Adequacy"],
+  },
+];

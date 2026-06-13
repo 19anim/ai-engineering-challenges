@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    sans-serif;
+  background: #eef3f8;
+  color: #172033;
+}
+header,
+main {
+  padding: 24px clamp(16px, 4vw, 48px);
+}
+header {
+  background: white;
+  border-bottom: 1px solid #d8dee9;
+}
+.toolbar,
+.kpis,
+.charts {
+  display: grid;
+  gap: 12px;
+}
+.toolbar {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+.kpis {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+.charts {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin: 16px 0;
+}
+.card {
+  background: white;
+  border: 1px solid #d8dee9;
+  border-radius: 8px;
+  padding: 16px;
+}
+.kpi strong {
+  display: block;
+  font-size: 25px;
+}
+.bars div {
+  height: 25px;
+  margin: 6px 0;
+  background: #2563eb;
+  color: white;
+  padding-left: 8px;
+  white-space: nowrap;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+th,
+td {
+  border-bottom: 1px solid #d8dee9;
+  padding: 8px;
+  text-align: left;
+  font-size: 13px;
+}
+select,
+input,
+button {
+  font: inherit;
+  padding: 9px;
+  border: 1px solid #d8dee9;
+  border-radius: 6px;
+}
+button {
+  background: #2563eb;
+  color: white;
+}

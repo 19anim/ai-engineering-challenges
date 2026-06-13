@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tenant Config Platform</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Multi-Tenant Configuration Platform</h1>
+      <div class="toolbar">
+        <input id="nameInput" placeholder="New tenant name" /><button id="add">
+          Create Tenant</button
+        ><button id="save">Save Version</button
+        ><button id="deleteBtn">Delete Tenant</button>
+      </div>
+    </header>
+    <main>
+      <section class="grid">
+        <div class="card">
+          <h2>Tenants</h2>
+          <select id="tenant"></select>
+          <pre id="editor" contenteditable="true"></pre>
+        </div>
+        <div class="card">
+          <h2>Preview mode</h2>
+          <label
+            >Claim type
+            <select id="claimType">
+              <option>OUTPATIENT</option>
+              <option>INPATIENT</option>
+              <option>DENTAL</option>
+              <option>MATERNITY</option>
+              <option>OPTICAL</option>
+            </select></label
+          ><label
+            >Amount <input id="amount" type="number" value="15000"
+          /></label>
+          <pre id="preview"></pre>
+        </div>
+        <div class="card">
+          <h2>Config diff</h2>
+          <select id="compare"></select>
+          <pre id="diff"></pre>
+        </div>
+        <div class="card">
+          <h2>Config history / rollback</h2>
+          <select id="history"></select
+          ><button id="rollback">Rollback</button>
+          <pre id="histOut"></pre>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

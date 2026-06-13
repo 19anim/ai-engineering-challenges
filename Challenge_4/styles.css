@@ -1,0 +1,78 @@
+:root {
+  --ink: #172033;
+  --muted: #64748b;
+  --line: #d8dee9;
+  --blue: #2563eb;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    sans-serif;
+  background: #f1f5f9;
+  color: var(--ink);
+}
+header {
+  padding: 24px clamp(16px, 4vw, 48px);
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+main {
+  padding: 24px clamp(16px, 4vw, 48px);
+}
+input {
+  font: inherit;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  min-width: min(520px, 100%);
+}
+.layout {
+  display: grid;
+  grid-template-columns: 70px 1fr 320px;
+  gap: 16px;
+}
+.card,
+details {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+}
+.term {
+  cursor: pointer;
+  padding: 10px;
+  border-top: 1px solid #edf2f7;
+}
+.term:hover {
+  background: #f8fafc;
+}
+mark {
+  background: #fde68a;
+}
+.pill {
+  display: inline-block;
+  border-radius: 999px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+button {
+  margin: 4px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: white;
+  color: var(--blue);
+  padding: 8px;
+}
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}

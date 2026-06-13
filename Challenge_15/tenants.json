@@ -1,0 +1,226 @@
+[
+  {
+    "id": "safe",
+    "name": "SafeGuard Insurance",
+    "logoUrl": "https://example.com/safe.svg",
+    "branding": {
+      "primary": "#2563EB",
+      "secondary": "#10B981"
+    },
+    "claimTypes": [
+      "OUTPATIENT",
+      "INPATIENT",
+      "DENTAL"
+    ],
+    "documents": {
+      "OUTPATIENT": {
+        "required": [
+          "medical receipt"
+        ],
+        "optional": [
+          "prescription"
+        ]
+      },
+      "INPATIENT": {
+        "required": [
+          "medical receipt",
+          "discharge summary"
+        ],
+        "optional": []
+      },
+      "DENTAL": {
+        "required": [
+          "dental receipt"
+        ],
+        "optional": [
+          "x-ray"
+        ]
+      }
+    },
+    "autoApproval": 20000,
+    "tiers": [
+      {
+        "max": 100000,
+        "role": "assessor"
+      },
+      {
+        "max": 500000,
+        "role": "team_lead"
+      },
+      {
+        "max": 999999999,
+        "role": "director"
+      }
+    ],
+    "notifications": {
+      "claim_submitted": [
+        "email"
+      ],
+      "approved": [
+        "email"
+      ],
+      "rejected": [
+        "email"
+      ],
+      "payment_sent": [
+        "email"
+      ]
+    },
+    "sla": {
+      "OUTPATIENT": 5,
+      "INPATIENT": 10,
+      "DENTAL": 5
+    },
+    "customFields": [
+      "Employee ID"
+    ]
+  },
+  {
+    "id": "health",
+    "name": "HealthFirst",
+    "logoUrl": "https://example.com/health.svg",
+    "branding": {
+      "primary": "#0F766E",
+      "secondary": "#F59E0B"
+    },
+    "claimTypes": [
+      "OUTPATIENT",
+      "INPATIENT",
+      "DENTAL",
+      "MATERNITY",
+      "OPTICAL"
+    ],
+    "documents": {
+      "OUTPATIENT": {
+        "required": [
+          "medical receipt"
+        ],
+        "optional": []
+      },
+      "INPATIENT": {
+        "required": [
+          "medical receipt",
+          "discharge summary"
+        ],
+        "optional": []
+      },
+      "DENTAL": {
+        "required": [
+          "dental receipt"
+        ],
+        "optional": []
+      },
+      "MATERNITY": {
+        "required": [
+          "medical receipt",
+          "birth certificate"
+        ],
+        "optional": []
+      },
+      "OPTICAL": {
+        "required": [
+          "optical receipt"
+        ],
+        "optional": []
+      }
+    },
+    "autoApproval": 5000,
+    "tiers": [
+      {
+        "max": 100000,
+        "role": "assessor"
+      },
+      {
+        "max": 999999999,
+        "role": "manager"
+      }
+    ],
+    "notifications": {
+      "claim_submitted": [
+        "email",
+        "SMS"
+      ],
+      "approved": [
+        "email",
+        "SMS"
+      ],
+      "rejected": [
+        "email",
+        "SMS"
+      ],
+      "payment_sent": [
+        "email",
+        "SMS"
+      ]
+    },
+    "sla": {
+      "OUTPATIENT": 7,
+      "INPATIENT": 7,
+      "DENTAL": 7,
+      "MATERNITY": 7,
+      "OPTICAL": 7
+    },
+    "customFields": []
+  },
+  {
+    "id": "gov",
+    "name": "GovHealth",
+    "logoUrl": "https://example.com/gov.svg",
+    "branding": {
+      "primary": "#334155",
+      "secondary": "#DC2626"
+    },
+    "claimTypes": [
+      "OUTPATIENT",
+      "INPATIENT"
+    ],
+    "documents": {
+      "OUTPATIENT": {
+        "required": [
+          "medical receipt"
+        ],
+        "optional": []
+      },
+      "INPATIENT": {
+        "required": [
+          "medical receipt",
+          "discharge summary"
+        ],
+        "optional": []
+      }
+    },
+    "autoApproval": 0,
+    "tiers": [
+      {
+        "max": 999999999,
+        "role": "committee"
+      }
+    ],
+    "notifications": {
+      "claim_submitted": [
+        "email",
+        "webhook"
+      ],
+      "approved": [
+        "email",
+        "webhook"
+      ],
+      "rejected": [
+        "email",
+        "webhook"
+      ],
+      "payment_sent": [
+        "email",
+        "webhook"
+      ]
+    },
+    "sla": {
+      "OUTPATIENT": 15,
+      "INPATIENT": 15
+    },
+    "customFields": [
+      "Department",
+      "Budget Code"
+    ]
+  }
+]

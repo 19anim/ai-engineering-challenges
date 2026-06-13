@@ -1,0 +1,182 @@
+[
+  {
+    "expense_id": "EXP-001",
+    "date": "2024-02-02",
+    "benefit_type": "OUTPATIENT",
+    "sub_benefit": "Doctor Visit",
+    "amount": 3300,
+    "diagnosis": "Acute bronchitis",
+    "provider": "Bangkok Hospital"
+  },
+  {
+    "expense_id": "EXP-002",
+    "date": "2024-03-03",
+    "benefit_type": "OUTPATIENT",
+    "sub_benefit": "Doctor Visit",
+    "amount": 4100,
+    "diagnosis": "Acute bronchitis",
+    "provider": "Bangkok Hospital"
+  },
+  {
+    "expense_id": "EXP-003",
+    "date": "2024-04-04",
+    "benefit_type": "DENTAL",
+    "sub_benefit": "Basic Dental",
+    "amount": 4900,
+    "diagnosis": "Acute bronchitis",
+    "provider": "Bangkok Hospital"
+  },
+  {
+    "expense_id": "EXP-004",
+    "date": "2024-05-05",
+    "benefit_type": "OUTPATIENT",
+    "sub_benefit": "Doctor Visit",
+    "amount": 5700,
+    "diagnosis": "Acute bronchitis",
+    "provider": "Bangkok Hospital"
+  },
+  {
+    "expense_id": "EXP-005",
+    "date": "2024-06-06",
+    "benefit_type": "OUTPATIENT",
+    "sub_benefit": "Diagnostic Tests",
+    "amount": 6500,
+    "diagnosis": "Acute bronchitis",
+    "provider": "Bangkok Hospital"
+  },
+  {
+    "expense_id": "EXP-006",
+    "date": "2024-01-07",
+    "benefit_type": "OUTPATIENT",
+    "sub_benefit": "Doctor Visit",
+    "amount": 7300,
+    "diagnosis": "Acute bronchitis",
+    "provider": "Bangkok Hospital"
+  },
+  {
+    "expense_id": "EXP-007",
+    "date": "2024-02-08",
+    "benefit_type": "OUTPATIENT",
+    "sub_benefit": "Doctor Visit",
+    "amount": 8100,
+    "diagnosis": "Acute bronchitis",
+    "provider": "Bangkok Hospital"
+  },
+  {
+    "expense_id": "EXP-008",
+    "date": "2024-03-09",
+    "benefit_type": "OUTPATIENT",
+    "sub_benefit": "Doctor Visit",
+    "amount": 8900,
+    "diagnosis": "Acute bronchitis",
+    "provider": "Bangkok Hospital"
+  },
+  {
+    "expense_id": "EXP-009",
+    "date": "2024-04-10",
+    "benefit_type": "DENTAL",
+    "sub_benefit": "Basic Dental",
+    "amount": 9700,
+    "diagnosis": "cosmetic whitening",
+    "provider": "Bangkok Hospital"
+  },
+  {
+    "expense_id": "EXP-010",
+    "date": "2024-05-11",
+    "benefit_type": "OUTPATIENT",
+    "sub_benefit": "Diagnostic Tests",
+    "amount": 10500,
+    "diagnosis": "Acute bronchitis",
+    "provider": "Bangkok Hospital"
+  },
+  {
+    "expense_id": "EXP-011",
+    "date": "2024-06-12",
+    "benefit_type": "OUTPATIENT",
+    "sub_benefit": "Doctor Visit",
+    "amount": 11300,
+    "diagnosis": "Acute bronchitis",
+    "provider": "Bangkok Hospital"
+  },
+  {
+    "expense_id": "EXP-012",
+    "date": "2024-01-13",
+    "benefit_type": "OUTPATIENT",
+    "sub_benefit": "Doctor Visit",
+    "amount": 12100,
+    "diagnosis": "Acute bronchitis",
+    "provider": "Bangkok Hospital"
+  },
+  {
+    "expense_id": "EXP-013",
+    "date": "2024-02-14",
+    "benefit_type": "OUTPATIENT",
+    "sub_benefit": "Doctor Visit",
+    "amount": 12900,
+    "diagnosis": "Acute bronchitis",
+    "provider": "Bangkok Hospital"
+  },
+  {
+    "expense_id": "EXP-014",
+    "date": "2024-03-15",
+    "benefit_type": "OUTPATIENT",
+    "sub_benefit": "Doctor Visit",
+    "amount": 13700,
+    "diagnosis": "Acute bronchitis",
+    "provider": "Bangkok Hospital"
+  },
+  {
+    "expense_id": "EXP-015",
+    "date": "2024-04-16",
+    "benefit_type": "DENTAL",
+    "sub_benefit": "Basic Dental",
+    "amount": 14500,
+    "diagnosis": "Acute bronchitis",
+    "provider": "Bangkok Hospital"
+  },
+  {
+    "expense_id": "EXP-016",
+    "date": "2024-05-17",
+    "benefit_type": "OUTPATIENT",
+    "sub_benefit": "Doctor Visit",
+    "amount": 15300,
+    "diagnosis": "Acute bronchitis",
+    "provider": "Bangkok Hospital"
+  },
+  {
+    "expense_id": "EXP-017",
+    "date": "2024-06-18",
+    "benefit_type": "OUTPATIENT",
+    "sub_benefit": "Doctor Visit",
+    "amount": 16100,
+    "diagnosis": "Acute bronchitis",
+    "provider": "Bangkok Hospital"
+  },
+  {
+    "expense_id": "EXP-018",
+    "date": "2024-01-19",
+    "benefit_type": "OUTPATIENT",
+    "sub_benefit": "Doctor Visit",
+    "amount": 16900,
+    "diagnosis": "Acute bronchitis",
+    "provider": "Bangkok Hospital"
+  },
+  {
+    "expense_id": "EXP-019",
+    "date": "2024-02-20",
+    "benefit_type": "OUTPATIENT",
+    "sub_benefit": "Doctor Visit",
+    "amount": 17700,
+    "diagnosis": "Acute bronchitis",
+    "provider": "Bangkok Hospital"
+  },
+  {
+    "expense_id": "EXP-020",
+    "date": "2024-03-21",
+    "benefit_type": "OUTPATIENT",
+    "sub_benefit": "Diagnostic Tests",
+    "amount": 18500,
+    "diagnosis": "Acute bronchitis",
+    "provider": "Bangkok Hospital"
+  }
+]

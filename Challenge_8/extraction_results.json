@@ -1,0 +1,372 @@
+[
+  {
+    "document_type": "receipt",
+    "confidence": 0.95,
+    "fields": {
+      "hospital_name": {
+        "value": "Bangkok Hospital",
+        "confidence": 0.98
+      },
+      "patient_name": {
+        "value": "Patient 1",
+        "confidence": 0.94
+      },
+      "date": {
+        "value": "2024-03-01",
+        "confidence": 0.94
+      },
+      "items": {
+        "value": [
+          {
+            "description": "Medical service",
+            "quantity": 1,
+            "unit_price": 1000.0,
+            "total": 1000.0
+          }
+        ],
+        "confidence": 0.88
+      },
+      "grand_total": {
+        "value": 1000.0,
+        "confidence": 0.97
+      },
+      "payment_method": {
+        "value": "Card",
+        "confidence": 0.9
+      }
+    },
+    "validation_errors": []
+  },
+  {
+    "document_type": "receipt",
+    "confidence": 0.95,
+    "fields": {
+      "hospital_name": {
+        "value": "Bangkok Hospital",
+        "confidence": 0.98
+      },
+      "patient_name": {
+        "value": "Patient 2",
+        "confidence": 0.94
+      },
+      "date": {
+        "value": "2024-03-02",
+        "confidence": 0.94
+      },
+      "items": {
+        "value": [
+          {
+            "description": "Medical service",
+            "quantity": 1,
+            "unit_price": 2000.0,
+            "total": 2000.0
+          }
+        ],
+        "confidence": 0.88
+      },
+      "grand_total": {
+        "value": 2000.0,
+        "confidence": 0.97
+      },
+      "payment_method": {
+        "value": "Card",
+        "confidence": 0.9
+      }
+    },
+    "validation_errors": []
+  },
+  {
+    "document_type": "receipt",
+    "confidence": 0.95,
+    "fields": {
+      "hospital_name": {
+        "value": "Bangkok Hospital",
+        "confidence": 0.98
+      },
+      "patient_name": {
+        "value": "Patient 3",
+        "confidence": 0.94
+      },
+      "date": {
+        "value": "2024-03-03",
+        "confidence": 0.94
+      },
+      "items": {
+        "value": [
+          {
+            "description": "Medical service",
+            "quantity": 1,
+            "unit_price": 3000.0,
+            "total": 3000.0
+          }
+        ],
+        "confidence": 0.88
+      },
+      "grand_total": {
+        "value": 3000.0,
+        "confidence": 0.97
+      },
+      "payment_method": {
+        "value": "Card",
+        "confidence": 0.9
+      }
+    },
+    "validation_errors": []
+  },
+  {
+    "document_type": "discharge_summary",
+    "confidence": 0.95,
+    "fields": {
+      "hospital_name": {
+        "value": "Bangkok Hospital",
+        "confidence": 0.98
+      },
+      "patient_name": {
+        "value": "Patient 4",
+        "confidence": 0.94
+      },
+      "admission_date": {
+        "value": "2024-03-01",
+        "confidence": 0.91
+      },
+      "discharge_date": {
+        "value": "2024-03-04",
+        "confidence": 0.91
+      },
+      "diagnosis": {
+        "value": {
+          "primary": "Acute bronchitis",
+          "secondary": []
+        },
+        "confidence": 0.86
+      },
+      "procedures_performed": {
+        "value": [
+          "Nebulization"
+        ],
+        "confidence": 0.83
+      },
+      "attending_physician": {
+        "value": "Dr. Arun",
+        "confidence": 0.86
+      },
+      "discharge_instructions": {
+        "value": "Rest, hydrate, and follow up if symptoms persist.",
+        "confidence": 0.7
+      }
+    },
+    "validation_errors": []
+  },
+  {
+    "document_type": "discharge_summary",
+    "confidence": 0.95,
+    "fields": {
+      "hospital_name": {
+        "value": "Bangkok Hospital",
+        "confidence": 0.98
+      },
+      "patient_name": {
+        "value": "Patient 5",
+        "confidence": 0.94
+      },
+      "admission_date": {
+        "value": "2024-03-01",
+        "confidence": 0.91
+      },
+      "discharge_date": {
+        "value": "2024-03-05",
+        "confidence": 0.91
+      },
+      "diagnosis": {
+        "value": {
+          "primary": "Acute bronchitis",
+          "secondary": []
+        },
+        "confidence": 0.86
+      },
+      "procedures_performed": {
+        "value": [
+          "Nebulization"
+        ],
+        "confidence": 0.83
+      },
+      "attending_physician": {
+        "value": "Dr. Arun",
+        "confidence": 0.86
+      },
+      "discharge_instructions": {
+        "value": "Rest, hydrate, and follow up if symptoms persist.",
+        "confidence": 0.7
+      }
+    },
+    "validation_errors": []
+  },
+  {
+    "document_type": "discharge_summary",
+    "confidence": 0.95,
+    "fields": {
+      "hospital_name": {
+        "value": "Bangkok Hospital",
+        "confidence": 0.98
+      },
+      "patient_name": {
+        "value": "Patient 6",
+        "confidence": 0.94
+      },
+      "admission_date": {
+        "value": "2024-03-01",
+        "confidence": 0.91
+      },
+      "discharge_date": {
+        "value": "2024-03-06",
+        "confidence": 0.91
+      },
+      "diagnosis": {
+        "value": {
+          "primary": "Acute bronchitis",
+          "secondary": []
+        },
+        "confidence": 0.86
+      },
+      "procedures_performed": {
+        "value": [
+          "Nebulization"
+        ],
+        "confidence": 0.83
+      },
+      "attending_physician": {
+        "value": "Dr. Arun",
+        "confidence": 0.86
+      },
+      "discharge_instructions": {
+        "value": "Rest, hydrate, and follow up if symptoms persist.",
+        "confidence": 0.7
+      }
+    },
+    "validation_errors": []
+  },
+  {
+    "document_type": "lab_report",
+    "confidence": 0.95,
+    "fields": {
+      "lab_name": {
+        "value": "Bangkok Hospital Lab",
+        "confidence": 0.94
+      },
+      "patient_name": {
+        "value": "Patient 7",
+        "confidence": 0.94
+      },
+      "date": {
+        "value": "2024-03-07",
+        "confidence": 0.94
+      },
+      "tests": {
+        "value": [
+          {
+            "test_name": "CBC",
+            "result": "7.0",
+            "unit": "10^9/L",
+            "reference_range": "4-10",
+            "flag": "normal"
+          }
+        ],
+        "confidence": 0.82
+      }
+    },
+    "validation_errors": []
+  },
+  {
+    "document_type": "lab_report",
+    "confidence": 0.95,
+    "fields": {
+      "lab_name": {
+        "value": "Bangkok Hospital Lab",
+        "confidence": 0.94
+      },
+      "patient_name": {
+        "value": "Patient 8",
+        "confidence": 0.94
+      },
+      "date": {
+        "value": "2024-03-08",
+        "confidence": 0.94
+      },
+      "tests": {
+        "value": [
+          {
+            "test_name": "CBC",
+            "result": "7.0",
+            "unit": "10^9/L",
+            "reference_range": "4-10",
+            "flag": "normal"
+          }
+        ],
+        "confidence": 0.82
+      }
+    },
+    "validation_errors": []
+  },
+  {
+    "document_type": "prescription",
+    "confidence": 0.95,
+    "fields": {
+      "doctor_name": {
+        "value": "Dr. Arun",
+        "confidence": 0.9
+      },
+      "patient_name": {
+        "value": "Patient 9",
+        "confidence": 0.94
+      },
+      "date": {
+        "value": "2024-03-09",
+        "confidence": 0.94
+      },
+      "medications": {
+        "value": [
+          {
+            "name": "Amoxicillin",
+            "dosage": "500mg",
+            "frequency": "3 times daily",
+            "duration": "5 days",
+            "quantity": 15
+          }
+        ],
+        "confidence": 0.86
+      }
+    },
+    "validation_errors": []
+  },
+  {
+    "document_type": "prescription",
+    "confidence": 0.95,
+    "fields": {
+      "doctor_name": {
+        "value": "Dr. Arun",
+        "confidence": 0.9
+      },
+      "patient_name": {
+        "value": "Patient 10",
+        "confidence": 0.94
+      },
+      "date": {
+        "value": "2024-03-10",
+        "confidence": 0.94
+      },
+      "medications": {
+        "value": [
+          {
+            "name": "Amoxicillin",
+            "dosage": "500mg",
+            "frequency": "3 times daily",
+            "duration": "5 days",
+            "quantity": 15
+          }
+        ],
+        "confidence": 0.86
+      }
+    },
+    "validation_errors": []
+  }
+]

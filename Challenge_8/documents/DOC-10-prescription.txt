@@ -1,0 +1,13 @@
+Document Type: prescription
+Hospital: Bangkok Hospital
+Lab: Bangkok Hospital Lab
+Doctor: Dr. Arun
+Patient: Patient 10
+Date: 2024-03-10
+Admission Date: 2024-03-01
+Discharge Date: 2024-03-10
+Diagnosis: Acute bronchitis
+Procedure: Nebulization
+Medication: Amoxicillin 500mg
+Grand Total: 10000
+Payment Method: Card

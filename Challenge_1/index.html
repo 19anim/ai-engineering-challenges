@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insurance Plan Comparison</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <!-- Hero Header -->
+      <header class="hero">
+        <div class="hero-content">
+          <div class="hero-badge">Health Insurance</div>
+          <h1>Find Your Perfect Plan</h1>
+          <p>
+            Compare our plans side by side and choose the coverage that fits
+            your life and budget.
+          </p>
+        </div>
+      </header>
+
+      <!-- Comparison Section -->
+      <main class="container">
+        <div class="section-header">
+          <h2>Plan Comparison</h2>
+          <p>All prices shown in USD. Benefits reset annually.</p>
+        </div>
+
+        <!-- Plan Cards (mobile) + Table (desktop) -->
+        <div id="comparison-root"></div>
+      </main>
+
+      <footer class="footer">
+        <p>
+          &copy; 2025 HealthGuard Insurance &mdash; All rights reserved. Plans
+          subject to terms and conditions.
+        </p>
+      </footer>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

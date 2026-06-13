@@ -1,0 +1,61 @@
+{
+  "country": "VN",
+  "rules": [
+    {
+      "rule_id": "VN-docs",
+      "description": "Required documents",
+      "rule_type": "document_requirement",
+      "parameters": {
+        "base": [
+          "medical_receipt",
+          "id_card_copy"
+        ],
+        "by_claim_type": {
+          "INPATIENT": [
+            "hospital_certificate"
+          ]
+        }
+      },
+      "effective_date": "2024-01-01"
+    },
+    {
+      "rule_id": "VN-sla",
+      "description": "Processing SLA",
+      "rule_type": "sla_check",
+      "parameters": {
+        "ALL": 10
+      },
+      "effective_date": "2024-01-01"
+    },
+    {
+      "rule_id": "VN-wait",
+      "description": "Waiting period",
+      "rule_type": "waiting_period",
+      "parameters": {
+        "general": 30,
+        "pre_existing": 365
+      },
+      "effective_date": "2024-01-01"
+    },
+    {
+      "rule_id": "VN-mask",
+      "description": "Mask full name",
+      "rule_type": "data_masking",
+      "parameters": {
+        "field": "full_name",
+        "mode": "initials"
+      },
+      "effective_date": "2024-01-01"
+    },
+    {
+      "rule_id": "VN-maternity",
+      "description": "Maternity mandate",
+      "rule_type": "coverage_mandate",
+      "parameters": {
+        "claim_type": "MATERNITY",
+        "min_policy_months": 12
+      },
+      "effective_date": "2024-01-01"
+    }
+  ]
+}
