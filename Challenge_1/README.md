@@ -9,7 +9,7 @@ Open `index.html` directly or deploy the folder to any static host.
 ## Submission
 
 - Include `index.html`, `styles.css`, `app.js`, and `data.js`.
-- Provide a live URL for the comparison page.
+- Live URL: https://19anim.github.io/ai-engineering-challenges/Challenge_1/
 
 ## Approach
 

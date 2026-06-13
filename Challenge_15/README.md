@@ -14,7 +14,7 @@ Then open `http://127.0.0.1:8765/Challenge_15/`.
 
 ## Submission
 
-- Provide a live URL for the admin UI.
+- Live URL: https://19anim.github.io/ai-engineering-challenges/Challenge_15/
 - Include `tenants.json` and `demo_script.md`.
 
 ## Approach

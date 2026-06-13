@@ -8,7 +8,7 @@ Open `index.html` directly or deploy the folder to a static host. The browser do
 
 ## Submission
 
-- Provide a live URL for the glossary app.
+- Live URL: https://19anim.github.io/ai-engineering-challenges/Challenge_4/
 - Include `terms-data.js` as the bundled runtime data.
 - Keep `terms.json` as a readable source/reference copy of the glossary data.
 

@@ -16,16 +16,16 @@ Deploy these folders as static pages through GitHub Pages, Netlify, Vercel, or a
 | 9         | `Challenge_9/`  | Claims analytics dashboard; includes `claims.csv`                     |
 | 15        | `Challenge_15/` | Multi-tenant admin UI; open through a static server                   |
 
-Suggested GitHub Pages URLs after publishing this repository:
+GitHub Pages URLs:
 
 ```text
-https://<user>.github.io/<repo>/Challenge_1/
-https://<user>.github.io/<repo>/Challenge_3/
-https://<user>.github.io/<repo>/Challenge_4/
-https://<user>.github.io/<repo>/Challenge_5/
-https://<user>.github.io/<repo>/Challenge_7/
-https://<user>.github.io/<repo>/Challenge_9/
-https://<user>.github.io/<repo>/Challenge_15/
+https://19anim.github.io/ai-engineering-challenges/Challenge_1/
+https://19anim.github.io/ai-engineering-challenges/Challenge_3/
+https://19anim.github.io/ai-engineering-challenges/Challenge_4/
+https://19anim.github.io/ai-engineering-challenges/Challenge_5/
+https://19anim.github.io/ai-engineering-challenges/Challenge_7/
+https://19anim.github.io/ai-engineering-challenges/Challenge_9/
+https://19anim.github.io/ai-engineering-challenges/Challenge_15/
 ```
 
 ## Artifact-Only Challenges

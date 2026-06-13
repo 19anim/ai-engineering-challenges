@@ -14,7 +14,7 @@ Then open `http://127.0.0.1:8765/Challenge_9/`.
 
 ## Submission
 
-- Provide a live URL for the dashboard.
+- Live URL: https://19anim.github.io/ai-engineering-challenges/Challenge_9/
 - Include the generated `claims.csv` dataset.
 
 ## Approach

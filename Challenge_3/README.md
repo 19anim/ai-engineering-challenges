@@ -8,7 +8,7 @@ Open `index.html` directly or deploy the folder to a static host.
 
 ## Submission
 
-- Provide a live URL for the preview page.
+- Live URL: https://19anim.github.io/ai-engineering-challenges/Challenge_3/
 - Include `index.html`, `styles.css`, and `app.js`.
 
 ## Approach

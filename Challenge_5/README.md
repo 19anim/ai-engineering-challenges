@@ -14,7 +14,7 @@ Then open `http://127.0.0.1:8765/Challenge_5/`.
 
 ## Submission
 
-- Provide a live URL for the generator.
+- Live URL: https://19anim.github.io/ai-engineering-challenges/Challenge_5/
 - Include both sample policy JSON files under `policies/`.
 
 ## Approach

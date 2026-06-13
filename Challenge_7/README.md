@@ -8,7 +8,7 @@ Open `index.html` directly or deploy the folder to a static host.
 
 ## Submission
 
-- Provide a live URL for the wizard.
+- Live URL: https://19anim.github.io/ai-engineering-challenges/Challenge_7/
 - Include `index.html`, `styles.css`, and `app.js`.
 
 ## Approach
