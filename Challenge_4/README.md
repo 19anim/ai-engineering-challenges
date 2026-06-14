@@ -19,6 +19,7 @@ Open `index.html` directly or deploy the folder to a static host. The browser do
 - Matches are highlighted in the visible result list.
 - Navigation stays smooth across category grouping, alphabet jump, and related term links.
 - Related term links clear temporary filters, select the linked term, and scroll the term into view.
+- Active search/alphabet filters show a reset control so users can return to the full glossary.
 - A-Z navigation shows a toast when no term exists for a selected letter.
 - If multiple terms start with the selected letter, the list filters to those matching terms, selects the first match, scrolls it into view, and shows a toast with the match count.
 
@@ -26,4 +27,5 @@ Open `index.html` directly or deploy the folder to a static host. The browser do
 
 - Alphabet letters with no matching term do not fail silently; the user receives a visible notification.
 - Alphabet letters with multiple matching terms show all matching terms instead of hiding the extra matches.
+- Search and alphabet filters can be reset explicitly from the active filter bar.
 - Related term navigation works after search or alphabet filtering by resetting temporary filters before jumping.

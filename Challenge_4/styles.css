@@ -33,6 +33,25 @@ input {
   border-radius: 6px;
   min-width: min(520px, 100%);
 }
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.filter-bar[hidden] {
+  display: none;
+}
+#resetFilters {
+  margin: 0;
+  border-color: #bfdbfe;
+  background: #eff6ff;
+  color: var(--blue-dark);
+  font-weight: 700;
+}
 .layout {
   display: grid;
   grid-template-columns: 92px minmax(0, 1fr) 320px;
@@ -171,6 +190,13 @@ button {
   .az-link {
     flex: 0 0 38px;
     min-height: 38px;
+  }
+  .filter-bar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  #resetFilters {
+    width: 100%;
   }
   #detail {
     position: static;

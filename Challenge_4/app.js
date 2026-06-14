@@ -20,6 +20,17 @@ function getVisibleTerms() {
     return matchesQuery && matchesLetter;
   });
 }
+function updateFilterBar() {
+  const q = $("#q").value.trim();
+  const parts = [];
+  if (q) parts.push(`search: "${q}"`);
+  if (activeLetter) parts.push(`letter: ${activeLetter}`);
+
+  $("#filterBar").hidden = parts.length === 0;
+  $("#filterStatus").textContent = parts.length
+    ? `Active filters - ${parts.join(", ")}`
+    : "";
+}
 function showNotice(message) {
   let toast = $("#toast");
   if (!toast) {
@@ -46,6 +57,7 @@ function scrollTermIntoView(name) {
 function draw() {
   const q = $("#q").value.toLowerCase();
   const filtered = getVisibleTerms();
+  updateFilterBar();
   const groups = groupBy(filtered, "category");
   $("#list").innerHTML = Object.entries(groups)
     .map(
@@ -74,6 +86,12 @@ function jumpToRelatedTerm(name) {
   activeLetter = "";
   $("#q").value = "";
   select(name, { scroll: true });
+}
+function resetFilters() {
+  activeLetter = "";
+  $("#q").value = "";
+  draw();
+  showNotice("Filters reset. Showing all glossary terms.");
 }
 function jumpToLetter(letter) {
   const result = window.GlossaryNavigation.resolveAlphabetJump(terms, letter);
@@ -109,6 +127,7 @@ function init() {
     activeLetter = "";
     draw();
   };
+  $("#resetFilters").onclick = resetFilters;
   draw();
   select(terms[0].name);
 }
