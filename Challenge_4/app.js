@@ -97,8 +97,8 @@ function init() {
   terms = window.GLOSSARY_TERMS;
   $("#az").innerHTML = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     .split("")
-    .map((a) => `<a href="#" data-a="${a}">${a}</a>`)
-    .join("<br>");
+    .map((a) => `<button class="az-link" type="button" data-a="${a}" aria-label="Jump to ${a} terms">${a}</button>`)
+    .join("");
   $("#az").onclick = (e) => {
     if (e.target.dataset.a) {
       e.preventDefault();

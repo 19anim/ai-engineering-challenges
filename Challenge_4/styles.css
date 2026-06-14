@@ -3,6 +3,7 @@
   --muted: #64748b;
   --line: #d8dee9;
   --blue: #2563eb;
+  --blue-dark: #1e40af;
 }
 * {
   box-sizing: border-box;
@@ -34,8 +35,9 @@ input {
 }
 .layout {
   display: grid;
-  grid-template-columns: 70px 1fr 320px;
+  grid-template-columns: 92px minmax(0, 1fr) 320px;
   gap: 16px;
+  align-items: start;
 }
 .card,
 details {
@@ -43,6 +45,37 @@ details {
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 16px;
+}
+#az {
+  position: sticky;
+  top: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  padding: 10px;
+}
+.az-link {
+  display: grid;
+  min-width: 0;
+  min-height: 34px;
+  place-items: center;
+  margin: 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #fff;
+  color: var(--blue-dark);
+  font-weight: 700;
+  line-height: 1;
+}
+.az-link:hover,
+.az-link:focus {
+  border-color: var(--blue);
+  background: #eff6ff;
+  outline: none;
+}
+#detail {
+  position: sticky;
+  top: 16px;
 }
 .term {
   cursor: pointer;
@@ -90,17 +123,18 @@ button {
   position: fixed;
   right: 24px;
   bottom: 24px;
-  z-index: 10;
-  max-width: min(360px, calc(100vw - 32px));
-  padding: 12px 14px;
-  border: 1px solid #bfdbfe;
+  z-index: 1000;
+  max-width: min(420px, calc(100vw - 32px));
+  padding: 14px 16px;
+  border: 1px solid #60a5fa;
   border-radius: 8px;
-  background: #fff;
-  box-shadow: 0 12px 28px rgb(15 23 42 / 0.18);
-  color: var(--ink);
+  background: #0f172a;
+  box-shadow: 0 18px 44px rgb(15 23 42 / 0.34);
+  color: #fff;
+  font-weight: 700;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(8px);
+  transform: translateY(10px);
   transition:
     opacity 160ms ease,
     transform 160ms ease;
@@ -110,11 +144,46 @@ button {
   transform: translateY(0);
 }
 @media (max-width: 900px) {
+  header {
+    padding: 18px 16px;
+  }
+  header h1 {
+    margin-top: 0;
+    font-size: 26px;
+    line-height: 1.1;
+  }
+  main {
+    padding: 16px;
+  }
   .layout {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  #az {
+    top: 0;
+    z-index: 5;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 10px;
+    scrollbar-width: thin;
+  }
+  .az-link {
+    flex: 0 0 38px;
+    min-height: 38px;
+  }
+  #detail {
+    position: static;
+  }
+  details,
+  .card {
+    padding: 12px;
   }
   #toast {
-    right: 16px;
+    right: 12px;
     bottom: 16px;
+    left: 12px;
+    max-width: none;
+    text-align: center;
   }
 }
