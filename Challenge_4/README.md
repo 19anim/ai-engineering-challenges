@@ -17,4 +17,13 @@ Open `index.html` directly or deploy the folder to a static host. The browser do
 - Terms cover 6 categories and exceed the 40-term requirement.
 - Search filters across names and definitions as the user types.
 - Matches are highlighted in the visible result list.
-- Related terms and A-Z navigation jump directly to definitions.
+- Navigation stays smooth across category grouping, alphabet jump, and related term links.
+- Related term links clear temporary filters, select the linked term, and scroll the term into view.
+- A-Z navigation shows a toast when no term exists for a selected letter.
+- If multiple terms start with the selected letter, the list filters to those matching terms, selects the first match, scrolls it into view, and shows a toast with the match count.
+
+## Edge Cases Covered
+
+- Alphabet letters with no matching term do not fail silently; the user receives a visible notification.
+- Alphabet letters with multiple matching terms show all matching terms instead of hiding the extra matches.
+- Related term navigation works after search or alphabet filtering by resetting temporary filters before jumping.
