@@ -1,30 +1,166 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Claims Analytics</title>
-    <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Claims Analytics Dashboard</h1>
-      <div class="toolbar">
-        <input id="from" type="date" /><input id="to" type="date" /><select
-          id="type"
-        ></select
-        ><select id="status"></select
-        ><select id="insurer"></select
-        ><select id="country"></select
-        ><button id="exportBtn">Export CSV</button>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Claims Analytics — PapaYa</title>
+  <link rel="icon" href="data:,"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <!-- Chart.js from CDN — single script, no build step, cached by browser -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"
+          integrity="sha384-JUh163oCRItcbPme8pYnROHQMC6fNKTBWtRG3I3I0erJkzNgL7uxKlNwcrcFKeqF"
+          crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- ── Brand bar ── -->
+<header class="brand-bar">
+  <div class="brand-logo">
+    <svg width="26" height="26" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+      <circle cx="14" cy="14" r="14" fill="#1e3a5f"/>
+      <path d="M8 14a6 6 0 0 1 6-6v12a6 6 0 0 1-6-6Z" fill="#4ade80"/>
+      <circle cx="17" cy="11" r="2.5" fill="#fff"/>
+    </svg>
+    <span>PapaYa <em>Analytics</em></span>
+  </div>
+  <div class="brand-right">
+    <span class="dataset-badge">5 000 claims · 2024</span>
+  </div>
+</header>
+
+<!-- ── Filter bar ── -->
+<div class="filter-bar">
+  <div class="filter-group">
+    <label class="filter-label">From</label>
+    <input class="filter-input" id="from" type="date"/>
+  </div>
+  <div class="filter-group">
+    <label class="filter-label">To</label>
+    <input class="filter-input" id="to" type="date"/>
+  </div>
+  <div class="filter-group">
+    <label class="filter-label">Claim Type</label>
+    <select class="filter-input" id="type"><option value="">All</option></select>
+  </div>
+  <div class="filter-group">
+    <label class="filter-label">Status</label>
+    <select class="filter-input" id="status"><option value="">All</option></select>
+  </div>
+  <div class="filter-group">
+    <label class="filter-label">Insurer</label>
+    <select class="filter-input" id="insurer"><option value="">All</option></select>
+  </div>
+  <div class="filter-group">
+    <label class="filter-label">Country</label>
+    <select class="filter-input" id="country"><option value="">All</option></select>
+  </div>
+  <div class="filter-actions">
+    <button class="btn btn-ghost" id="resetBtn">↺ Reset</button>
+    <button class="btn btn-primary" id="exportBtn">⬇ Export CSV</button>
+  </div>
+</div>
+
+<!-- ── Main ── -->
+<main class="main-content">
+
+  <!-- KPI cards -->
+  <section class="kpi-grid" id="kpiGrid"></section>
+
+  <!-- Charts row 1: status donut + over time line -->
+  <div class="charts-row two-col">
+    <div class="card chart-card">
+      <div class="card-header">
+        <span class="card-title">Claims by Status</span>
+        <span class="card-sub" id="statusTotal"></span>
       </div>
-    </header>
-    <main>
-      <section id="kpis" class="kpis"></section>
-      <section id="charts" class="charts"></section>
-      <table id="tbl"></table>
-    </main>
-    <script src="app.js"></script>
-  </body>
+      <div class="chart-wrap" style="max-height:240px">
+        <canvas id="chartStatus"></canvas>
+      </div>
+    </div>
+    <div class="card chart-card">
+      <div class="card-header">
+        <span class="card-title">Claims Over Time</span>
+        <span class="card-sub">Monthly · 2024</span>
+      </div>
+      <div class="chart-wrap" style="max-height:240px">
+        <canvas id="chartTime"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Charts row 2: top 10 freq bar + top 10 cost horizontal bar -->
+  <div class="charts-row two-col">
+    <div class="card chart-card">
+      <div class="card-header">
+        <span class="card-title">Top 10 Diagnoses — Frequency</span>
+        <span class="card-sub">Click bar to filter table</span>
+      </div>
+      <div class="chart-wrap" style="max-height:300px">
+        <canvas id="chartDiagFreq"></canvas>
+      </div>
+    </div>
+    <div class="card chart-card">
+      <div class="card-header">
+        <span class="card-title">Top 10 Diagnoses — Total Cost</span>
+        <span class="card-sub">Approved amount</span>
+      </div>
+      <div class="chart-wrap" style="max-height:300px">
+        <canvas id="chartDiagCost"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Charts row 3: approval rate by insurer + processing time histogram -->
+  <div class="charts-row two-col">
+    <div class="card chart-card">
+      <div class="card-header">
+        <span class="card-title">Approval Rate by Insurer</span>
+        <span class="card-sub">% of claims approved</span>
+      </div>
+      <div class="chart-wrap" style="max-height:240px">
+        <canvas id="chartApproval"></canvas>
+      </div>
+    </div>
+    <div class="card chart-card">
+      <div class="card-header">
+        <span class="card-title">Processing Time Distribution</span>
+        <span class="card-sub">Days to process</span>
+      </div>
+      <div class="chart-wrap" style="max-height:240px">
+        <canvas id="chartHist"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Drill-down table -->
+  <div class="card table-card">
+    <div class="table-header">
+      <div>
+        <span class="card-title">Claims Detail</span>
+        <span class="table-count" id="tableCount"></span>
+      </div>
+      <button class="btn btn-ghost btn-sm" id="clearDiagFilter" style="display:none">✕ Clear diagnosis filter</button>
+    </div>
+    <div class="table-wrap">
+      <table id="tbl">
+        <thead id="tblHead"></thead>
+        <tbody id="tblBody"></tbody>
+      </table>
+    </div>
+    <div class="pagination" id="pagination"></div>
+  </div>
+
+</main>
+
+<!-- Loading overlay -->
+<div class="loading-overlay" id="loadingOverlay">
+  <div class="spinner"></div>
+  <p>Loading 5 000 claims…</p>
+</div>
+
+<script src="app.js"></script>
+</body>
 </html>
