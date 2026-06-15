@@ -1,23 +1,83 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Claims Intake Wizard</title>
+    <title>Claims Intake — PapaYa</title>
     <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <h1>Claims Intake Wizard</h1>
-      <div id="steps"></div>
+
+    <!-- ── Brand bar ── -->
+    <header class="brand-bar">
+      <div class="brand-logo">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <circle cx="14" cy="14" r="14" fill="#1e3a5f"/>
+          <path d="M8 14a6 6 0 0 1 6-6v12a6 6 0 0 1-6-6Z" fill="#4ade80"/>
+          <circle cx="17" cy="11" r="2.5" fill="#fff"/>
+        </svg>
+        <span>PapaYa <em>Claims</em></span>
+      </div>
+      <div class="brand-meta">
+        <span class="member-chip">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          Mai Nguyen · POL-2024-TH-00789
+        </span>
+      </div>
     </header>
-    <main>
-      <section id="content"></section>
-      <p>
-        <button id="prev">Back</button><button id="next">Next / Submit</button>
-      </p>
-    </main>
+
+    <!-- ── Wizard wrapper ── -->
+    <div class="wizard-wrap">
+
+      <!-- Stepper -->
+      <nav class="stepper" id="stepper" role="list" aria-label="Claim submission steps"></nav>
+
+      <!-- Card -->
+      <div class="wizard-card">
+        <div class="card-body" id="content"></div>
+      </div>
+
+      <!-- Nav buttons -->
+      <div class="wizard-nav">
+        <button class="btn btn-ghost" id="prev">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+          Back
+        </button>
+        <button class="btn btn-primary" id="next">
+          Continue
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- ── Success overlay ── -->
+    <div class="success-overlay" id="successOverlay" role="dialog" aria-modal="true" aria-label="Claim submitted successfully">
+      <div class="success-card">
+        <div class="success-anim">
+          <svg class="check-svg" viewBox="0 0 80 80">
+            <circle class="check-ring" cx="40" cy="40" r="36" fill="none" stroke="#4ade80" stroke-width="4"/>
+            <polyline class="check-mark" points="22,42 35,55 58,28" fill="none" stroke="#4ade80" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="confetti-wrap" id="confetti"></div>
+        </div>
+        <h2 class="success-title">Claim Submitted!</h2>
+        <p class="success-sub">Your claim has been received and is being processed. You'll receive a confirmation email within 24 hours.</p>
+        <div class="success-ref">
+          Claim Reference: <strong id="claimRef"></strong>
+        </div>
+        <div class="success-steps">
+          <div class="ss-item"><span class="ss-dot done"></span>Claim received</div>
+          <div class="ss-item"><span class="ss-dot pending"></span>Under review (1–2 business days)</div>
+          <div class="ss-item"><span class="ss-dot pending"></span>Decision &amp; payment</div>
+        </div>
+        <button class="btn btn-primary" onclick="location.reload()">Submit Another Claim</button>
+      </div>
+    </div>
+
     <script src="app.js"></script>
   </body>
 </html>
