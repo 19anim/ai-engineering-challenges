@@ -1,20 +1,22 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Policy Summary</title>
+    <title>Policy Summary Generator</title>
     <link rel="icon" href="data:," />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <h1>Policy Summary Generator</h1>
-      <select id="policy">
+    <header class="app-header">
+      <div class="app-logo">🛡️ Policy<span>Summary</span></div>
+      <select id="policy" class="policy-select">
         <option value="policies/corporate_health_plus.json">
-          Corporate Health Plus
+          Corporate Health Plus (THB · Gold)
         </option>
-        <option value="policies/mekong_retail.json">Mekong Retail</option>
+        <option value="policies/mekong_retail.json">
+          Mekong Retail SME (VND · Silver)
+        </option>
       </select>
     </header>
     <main id="out"></main>

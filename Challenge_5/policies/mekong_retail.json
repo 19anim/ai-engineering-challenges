@@ -2,105 +2,90 @@
   "policy_number": "POL-2024-VN-00042",
   "policyholder": {
     "name": "Mekong Retail Group",
-    "type": "CORPORATE",
-    "industry": "Technology",
-    "employee_count": 250
+    "type": "SME",
+    "industry": "Retail",
+    "employee_count": 48
   },
   "plan": {
-    "name": "Corporate Health Plus",
-    "tier": "Gold",
-    "effective_date": "2024-01-01",
-    "expiry_date": "2024-12-31",
+    "name": "SME Essential Care",
+    "tier": "Silver",
+    "effective_date": "2024-03-01",
+    "expiry_date": "2025-02-28",
     "currency": "VND"
   },
   "members": {
-    "total": 250,
-    "employee": 250,
-    "dependent_spouse": 180,
-    "dependent_child": 320
+    "total": 48,
+    "employee": 48,
+    "dependent_spouse": 22
   },
   "benefits": [
     {
       "type": "INPATIENT",
-      "annual_limit": 2000000,
+      "annual_limit": 150000000,
       "sub_benefits": [
-        {
-          "name": "Room & Board",
-          "limit_per_day": 8000,
-          "max_days": 120
-        },
-        {
-          "name": "Surgery",
-          "limit_per_event": 500000
-        }
+        { "name": "Room & Board",  "limit_per_day": 1200000, "max_days": 60 },
+        { "name": "ICU",           "limit_per_day": 2500000, "max_days": 14 },
+        { "name": "Surgery",       "limit_per_event": 80000000 },
+        { "name": "Ambulance",     "limit_per_event": 2000000 }
       ]
     },
     {
       "type": "OUTPATIENT",
-      "annual_limit": 100000,
+      "annual_limit": 30000000,
       "sub_benefits": [
-        {
-          "name": "Doctor Visit",
-          "limit_per_visit": 3000,
-          "visits_per_year": 30
-        },
-        {
-          "name": "Diagnostic Tests",
-          "limit_per_year": 20000
-        }
+        { "name": "Doctor Visit",       "limit_per_visit": 500000,  "visits_per_year": 20 },
+        { "name": "Prescribed Medicine","limit_per_visit": 400000 },
+        { "name": "Diagnostic Tests",   "limit_per_year": 5000000 }
       ]
     },
     {
       "type": "DENTAL",
-      "annual_limit": 30000,
-      "waiting_period_days": 90,
+      "annual_limit": 6000000,
+      "waiting_period_days": 60,
       "sub_benefits": [
-        {
-          "name": "Basic Dental",
-          "limit_per_year": 20000
-        }
+        { "name": "Routine Checkup",    "limit_per_year": 2000000 },
+        { "name": "Fillings",           "limit_per_event": 1500000 },
+        { "name": "Extraction",         "limit_per_event": 800000 }
       ]
     },
     {
       "type": "MATERNITY",
-      "lifetime_limit": 120000000,
+      "lifetime_limit": 80000000,
       "waiting_period_days": 270,
       "sub_benefits": [
-        {
-          "name": "Normal Delivery",
-          "limit_per_event": 60000000
-        },
-        {
-          "name": "Prenatal Care",
-          "limit_per_pregnancy": 15000000
-        }
+        { "name": "Normal Delivery",  "limit_per_event": 30000000 },
+        { "name": "C-Section",        "limit_per_event": 55000000 },
+        { "name": "Prenatal Care",    "limit_per_pregnancy": 8000000 },
+        { "name": "Newborn Care",     "limit_per_event": 5000000 }
+      ]
+    },
+    {
+      "type": "ACCIDENT",
+      "annual_limit": 50000000,
+      "sub_benefits": [
+        { "name": "Accidental Death",          "limit_per_event": 50000000 },
+        { "name": "Permanent Disability",      "limit_per_event": 50000000 },
+        { "name": "Emergency Medical Expense", "limit_per_event": 10000000 }
       ]
     }
   ],
   "exclusions": [
-    "Pre-existing conditions within first 12 months",
-    "Cosmetic surgery and elective procedures",
-    "Treatment outside network without pre-authorization"
+    "Pre-existing conditions within first 6 months",
+    "Cosmetic and elective procedures",
+    "Self-inflicted injuries and attempted suicide",
+    "Injuries from war, riot, or civil unrest",
+    "Experimental or unproven treatments",
+    "Treatment at non-network facilities without emergency justification"
   ],
   "copay": {
-    "outpatient": {
-      "percentage": 20,
-      "max_per_visit": 500
-    },
-    "inpatient": {
-      "percentage": 0
-    },
-    "dental": {
-      "percentage": 30
-    }
+    "outpatient": { "percentage": 30, "max_per_visit": 200000 },
+    "inpatient":  { "percentage": 10 },
+    "dental":     { "percentage": 20 },
+    "accident":   { "percentage": 0 }
   },
   "network": {
-    "type": "PREFERRED_PROVIDER",
-    "hospital_count": 450,
-    "countries": [
-      "Thailand",
-      "Singapore",
-      "Malaysia"
-    ]
+    "type": "DIRECT_BILLING",
+    "hospital_count": 180,
+    "countries": ["Vietnam"]
   }
 }
