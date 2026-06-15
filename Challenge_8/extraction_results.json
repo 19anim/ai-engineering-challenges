@@ -1,273 +1,393 @@
 [
   {
+    "source_file": "DOC-01-citycare-receipt.png",
+    "vision_provider": "local-vision-simulator",
     "document_type": "receipt",
-    "confidence": 0.95,
+    "confidence": 0.93,
     "fields": {
       "hospital_name": {
-        "value": "Bangkok Hospital",
-        "confidence": 0.98
+        "value": "CityCare Medical Center",
+        "confidence": 0.95
       },
       "patient_name": {
-        "value": "Patient 1",
-        "confidence": 0.94
+        "value": "Anika Sharma",
+        "confidence": 0.93
       },
       "date": {
-        "value": "2024-03-01",
-        "confidence": 0.94
+        "value": "2024-04-12",
+        "confidence": 0.9
       },
       "items": {
         "value": [
           {
-            "description": "Medical service",
-            "quantity": 1,
-            "unit_price": 1000.0,
-            "total": 1000.0
+            "description": "General consultation",
+            "quantity": 1.0,
+            "unit_price": 1500.0,
+            "total": 1500.0
+          },
+          {
+            "description": "Chest X-ray",
+            "quantity": 1.0,
+            "unit_price": 2100.0,
+            "total": 2100.0
+          },
+          {
+            "description": "Dispensed medicine",
+            "quantity": 1.0,
+            "unit_price": 1150.0,
+            "total": 1150.0
           }
         ],
-        "confidence": 0.88
+        "confidence": 0.84
       },
       "grand_total": {
-        "value": 1000.0,
-        "confidence": 0.97
+        "value": 4750.0,
+        "confidence": 0.95
       },
       "payment_method": {
-        "value": "Card",
-        "confidence": 0.9
+        "value": "Visa card",
+        "confidence": 0.88
       }
     },
     "validation_errors": []
   },
   {
+    "source_file": "DOC-02-harbour-receipt.png",
+    "vision_provider": "local-vision-simulator",
     "document_type": "receipt",
-    "confidence": 0.95,
+    "confidence": 0.85,
     "fields": {
       "hospital_name": {
-        "value": "Bangkok Hospital",
-        "confidence": 0.98
+        "value": "Harbour Women and Children Clinic",
+        "confidence": 0.95
       },
       "patient_name": {
-        "value": "Patient 2",
-        "confidence": 0.94
+        "value": "Mei Lin Wong",
+        "confidence": 0.93
       },
       "date": {
-        "value": "2024-03-02",
-        "confidence": 0.94
+        "value": "2024-05-08",
+        "confidence": 0.9
       },
       "items": {
         "value": [
           {
-            "description": "Medical service",
-            "quantity": 1,
-            "unit_price": 2000.0,
-            "total": 2000.0
+            "description": "Antenatal review",
+            "quantity": 1.0,
+            "unit_price": 1800.0,
+            "total": 1800.0
+          },
+          {
+            "description": "Ultrasound scan",
+            "quantity": 1.0,
+            "unit_price": 3200.0,
+            "total": 3200.0
+          },
+          {
+            "description": "Urine dipstick",
+            "quantity": 2.0,
+            "unit_price": 180.0,
+            "total": 360.0
           }
         ],
-        "confidence": 0.88
+        "confidence": 0.84
       },
       "grand_total": {
-        "value": 2000.0,
-        "confidence": 0.97
+        "value": 5360.0,
+        "confidence": 0.95
       },
       "payment_method": {
-        "value": "Card",
-        "confidence": 0.9
+        "value": null,
+        "confidence": 0.22
       }
     },
     "validation_errors": []
   },
   {
+    "source_file": "DOC-03-saigon-receipt-missing-payment.png",
+    "vision_provider": "local-vision-simulator",
     "document_type": "receipt",
-    "confidence": 0.95,
+    "confidence": 0.85,
     "fields": {
       "hospital_name": {
-        "value": "Bangkok Hospital",
-        "confidence": 0.98
+        "value": "Saigon General Hospital",
+        "confidence": 0.95
       },
       "patient_name": {
-        "value": "Patient 3",
-        "confidence": 0.94
+        "value": "Minh Tran",
+        "confidence": 0.93
       },
       "date": {
-        "value": "2024-03-03",
-        "confidence": 0.94
+        "value": "2024-02-21",
+        "confidence": 0.9
       },
       "items": {
         "value": [
           {
-            "description": "Medical service",
-            "quantity": 1,
-            "unit_price": 3000.0,
-            "total": 3000.0
+            "description": "Emergency room fee",
+            "quantity": 1.0,
+            "unit_price": 2500.0,
+            "total": 2500.0
+          },
+          {
+            "description": "IV fluids",
+            "quantity": 2.0,
+            "unit_price": 450.0,
+            "total": 900.0
+          },
+          {
+            "description": "Blood test panel",
+            "quantity": 1.0,
+            "unit_price": 1250.0,
+            "total": 1250.0
           }
         ],
-        "confidence": 0.88
+        "confidence": 0.84
       },
       "grand_total": {
-        "value": 3000.0,
-        "confidence": 0.97
+        "value": 4650.0,
+        "confidence": 0.95
       },
       "payment_method": {
-        "value": "Card",
-        "confidence": 0.9
+        "value": null,
+        "confidence": 0.22
       }
     },
     "validation_errors": []
   },
   {
+    "source_file": "DOC-04-bangkok-discharge.png",
+    "vision_provider": "local-vision-simulator",
     "document_type": "discharge_summary",
-    "confidence": 0.95,
+    "confidence": 0.85,
     "fields": {
       "hospital_name": {
-        "value": "Bangkok Hospital",
-        "confidence": 0.98
+        "value": "Bangkok East Hospital",
+        "confidence": 0.95
       },
       "patient_name": {
-        "value": "Patient 4",
-        "confidence": 0.94
+        "value": "Somchai Prasert",
+        "confidence": 0.93
       },
       "admission_date": {
-        "value": "2024-03-01",
-        "confidence": 0.91
+        "value": "2024-06-03",
+        "confidence": 0.9
       },
       "discharge_date": {
-        "value": "2024-03-04",
-        "confidence": 0.91
+        "value": "2024-06-07",
+        "confidence": 0.9
       },
       "diagnosis": {
         "value": {
-          "primary": "Acute bronchitis",
-          "secondary": []
+          "primary": "J18.9 Pneumonia, unspecified organism",
+          "secondary": [
+            "E11.9 Type 2 diabetes mellitus without complications"
+          ]
         },
         "confidence": 0.86
       },
       "procedures_performed": {
         "value": [
-          "Nebulization"
+          "Chest radiography",
+          "IV antibiotic therapy"
         ],
-        "confidence": 0.83
+        "confidence": 0.82
       },
       "attending_physician": {
-        "value": "Dr. Arun",
-        "confidence": 0.86
+        "value": "Dr. Narin Chai",
+        "confidence": 0.84
       },
       "discharge_instructions": {
-        "value": "Rest, hydrate, and follow up if symptoms persist.",
-        "confidence": 0.7
+        "value": "Complete antibiotics, perform breathing exercises twice daily, return if fever recurs.",
+        "confidence": 0.78
       }
     },
     "validation_errors": []
   },
   {
+    "source_file": "DOC-05-queens-discharge.png",
+    "vision_provider": "local-vision-simulator",
     "document_type": "discharge_summary",
-    "confidence": 0.95,
+    "confidence": 0.85,
     "fields": {
       "hospital_name": {
-        "value": "Bangkok Hospital",
-        "confidence": 0.98
+        "value": "Queens Road Medical Center",
+        "confidence": 0.95
       },
       "patient_name": {
-        "value": "Patient 5",
-        "confidence": 0.94
+        "value": "Grace Chan",
+        "confidence": 0.93
       },
       "admission_date": {
-        "value": "2024-03-01",
-        "confidence": 0.91
+        "value": "2024-07-14",
+        "confidence": 0.9
       },
       "discharge_date": {
-        "value": "2024-03-05",
-        "confidence": 0.91
+        "value": "2024-07-16",
+        "confidence": 0.9
       },
       "diagnosis": {
         "value": {
-          "primary": "Acute bronchitis",
-          "secondary": []
+          "primary": "K35.80 Acute appendicitis",
+          "secondary": [
+            "R50.9 Fever, unspecified"
+          ]
         },
         "confidence": 0.86
       },
       "procedures_performed": {
         "value": [
-          "Nebulization"
+          "Laparoscopic appendectomy",
+          "Post-operative wound care"
         ],
-        "confidence": 0.83
+        "confidence": 0.82
       },
       "attending_physician": {
-        "value": "Dr. Arun",
-        "confidence": 0.86
+        "value": "Dr. Helen Ma",
+        "confidence": 0.84
       },
       "discharge_instructions": {
-        "value": "Rest, hydrate, and follow up if symptoms persist.",
-        "confidence": 0.7
+        "value": "Keep wound dry, avoid heavy lifting for 2 weeks, follow up in surgical clinic.",
+        "confidence": 0.78
       }
     },
     "validation_errors": []
   },
   {
+    "source_file": "DOC-06-lotus-discharge.png",
+    "vision_provider": "local-vision-simulator",
     "document_type": "discharge_summary",
-    "confidence": 0.95,
+    "confidence": 0.85,
     "fields": {
       "hospital_name": {
-        "value": "Bangkok Hospital",
-        "confidence": 0.98
+        "value": "Lotus International Hospital",
+        "confidence": 0.95
       },
       "patient_name": {
-        "value": "Patient 6",
-        "confidence": 0.94
+        "value": "Priya Nair",
+        "confidence": 0.93
       },
       "admission_date": {
-        "value": "2024-03-01",
-        "confidence": 0.91
+        "value": "2024-01-25",
+        "confidence": 0.9
       },
       "discharge_date": {
-        "value": "2024-03-06",
-        "confidence": 0.91
+        "value": "2024-01-29",
+        "confidence": 0.9
       },
       "diagnosis": {
         "value": {
-          "primary": "Acute bronchitis",
-          "secondary": []
+          "primary": "O80 Single spontaneous delivery",
+          "secondary": [
+            "D50.9 Iron deficiency anemia, unspecified"
+          ]
         },
         "confidence": 0.86
       },
       "procedures_performed": {
         "value": [
-          "Nebulization"
+          "Normal vaginal delivery",
+          "Newborn assessment"
         ],
-        "confidence": 0.83
+        "confidence": 0.82
       },
       "attending_physician": {
-        "value": "Dr. Arun",
-        "confidence": 0.86
+        "value": "Dr. Kanya S.",
+        "confidence": 0.84
       },
       "discharge_instructions": {
-        "value": "Rest, hydrate, and follow up if symptoms persist.",
-        "confidence": 0.7
+        "value": "Continue iron tablets, monitor bleeding, attend postpartum review in 7 days.",
+        "confidence": 0.78
       }
     },
     "validation_errors": []
   },
   {
+    "source_file": "DOC-07-mekong-lab.png",
+    "vision_provider": "local-vision-simulator",
     "document_type": "lab_report",
-    "confidence": 0.95,
+    "confidence": 0.85,
     "fields": {
       "lab_name": {
-        "value": "Bangkok Hospital Lab",
-        "confidence": 0.94
+        "value": "Mekong Diagnostics",
+        "confidence": 0.93
       },
       "patient_name": {
-        "value": "Patient 7",
-        "confidence": 0.94
+        "value": "Dara Nguyen",
+        "confidence": 0.92
       },
       "date": {
-        "value": "2024-03-07",
-        "confidence": 0.94
+        "value": "2024-03-18",
+        "confidence": 0.9
       },
       "tests": {
         "value": [
           {
-            "test_name": "CBC",
-            "result": "7.0",
+            "test_name": "Hemoglobin",
+            "result": "10.4",
+            "unit": "g/dL",
+            "reference_range": "12.0-15.5",
+            "flag": "low"
+          },
+          {
+            "test_name": "WBC",
+            "result": "7.2",
             "unit": "10^9/L",
-            "reference_range": "4-10",
+            "reference_range": "4.0-10.0",
+            "flag": "normal"
+          },
+          {
+            "test_name": "Platelets",
+            "result": "465",
+            "unit": "10^9/L",
+            "reference_range": "150-400",
+            "flag": "high"
+          }
+        ],
+        "confidence": 0.82
+      }
+    },
+    "validation_errors": []
+  },
+  {
+    "source_file": "DOC-08-victoria-lab.png",
+    "vision_provider": "local-vision-simulator",
+    "document_type": "lab_report",
+    "confidence": 0.75,
+    "fields": {
+      "lab_name": {
+        "value": "Victoria Pathology",
+        "confidence": 0.93
+      },
+      "patient_name": {
+        "value": "Oliver Smith",
+        "confidence": 0.92
+      },
+      "date": {
+        "value": "2024-09-02",
+        "confidence": 0.9
+      },
+      "tests": {
+        "value": [
+          {
+            "test_name": "ALT",
+            "result": "66",
+            "unit": "U/L",
+            "reference_range": "7-56",
+            "flag": "high"
+          },
+          {
+            "test_name": "AST",
+            "result": "32",
+            "unit": "U/L",
+            "reference_range": "10-40",
+            "flag": "normal"
+          },
+          {
+            "test_name": "Bilirubin",
+            "result": "0.8",
+            "unit": "mg/dL",
+            "reference_range": "0.1-1.2",
             "flag": "normal"
           }
         ],
@@ -277,94 +397,81 @@
     "validation_errors": []
   },
   {
-    "document_type": "lab_report",
-    "confidence": 0.95,
-    "fields": {
-      "lab_name": {
-        "value": "Bangkok Hospital Lab",
-        "confidence": 0.94
-      },
-      "patient_name": {
-        "value": "Patient 8",
-        "confidence": 0.94
-      },
-      "date": {
-        "value": "2024-03-08",
-        "confidence": 0.94
-      },
-      "tests": {
-        "value": [
-          {
-            "test_name": "CBC",
-            "result": "7.0",
-            "unit": "10^9/L",
-            "reference_range": "4-10",
-            "flag": "normal"
-          }
-        ],
-        "confidence": 0.82
-      }
-    },
-    "validation_errors": []
-  },
-  {
+    "source_file": "DOC-09-family-prescription.png",
+    "vision_provider": "local-vision-simulator",
     "document_type": "prescription",
-    "confidence": 0.95,
+    "confidence": 0.85,
     "fields": {
       "doctor_name": {
-        "value": "Dr. Arun",
+        "value": "Dr. Lan Pham",
         "confidence": 0.9
       },
       "patient_name": {
-        "value": "Patient 9",
-        "confidence": 0.94
+        "value": "Bao Nguyen",
+        "confidence": 0.92
       },
       "date": {
-        "value": "2024-03-09",
-        "confidence": 0.94
+        "value": "2024-10-05",
+        "confidence": 0.9
       },
       "medications": {
         "value": [
           {
             "name": "Amoxicillin",
-            "dosage": "500mg",
-            "frequency": "3 times daily",
+            "dosage": "500 mg",
+            "frequency": "Three times daily",
             "duration": "5 days",
-            "quantity": 15
+            "quantity": "15 capsules"
+          },
+          {
+            "name": "Paracetamol",
+            "dosage": "500 mg",
+            "frequency": "Every 6 hours as needed",
+            "duration": "3 days",
+            "quantity": "12 tablets"
           }
         ],
-        "confidence": 0.86
+        "confidence": 0.84
       }
     },
     "validation_errors": []
   },
   {
+    "source_file": "DOC-10-harbour-prescription.png",
+    "vision_provider": "local-vision-simulator",
     "document_type": "prescription",
-    "confidence": 0.95,
+    "confidence": 0.85,
     "fields": {
       "doctor_name": {
-        "value": "Dr. Arun",
+        "value": "Dr. Victor Lee",
         "confidence": 0.9
       },
       "patient_name": {
-        "value": "Patient 10",
-        "confidence": 0.94
+        "value": "Nur Aisyah",
+        "confidence": 0.92
       },
       "date": {
-        "value": "2024-03-10",
-        "confidence": 0.94
+        "value": "2024-11-11",
+        "confidence": 0.9
       },
       "medications": {
         "value": [
           {
-            "name": "Amoxicillin",
-            "dosage": "500mg",
-            "frequency": "3 times daily",
-            "duration": "5 days",
-            "quantity": 15
+            "name": "Ibuprofen",
+            "dosage": "400 mg",
+            "frequency": "Twice daily after meals",
+            "duration": "4 days",
+            "quantity": "8 tablets"
+          },
+          {
+            "name": "Chlorhexidine mouthwash",
+            "dosage": "10 mL",
+            "frequency": "Rinse twice daily",
+            "duration": "7 days",
+            "quantity": "1 bottle"
           }
         ],
-        "confidence": 0.86
+        "confidence": 0.84
       }
     },
     "validation_errors": []
