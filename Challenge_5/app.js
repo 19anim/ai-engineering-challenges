@@ -44,8 +44,11 @@ function limitLabel(b, currency) {
 
 /* ── sub-benefit detail rows ─────────────────────────── */
 function subBenefitRows(subs, currency) {
+  // Keys whose values are monetary amounts
   const isMoneyKey = (k) =>
-    k.startsWith("limit") || k === "copay_amount" || k === "max_per_visit";
+    k.startsWith("limit") || k.endsWith("_limit") ||
+    k === "copay_amount" || k === "max_per_visit";
+  // Keys whose values are plain counts (days, visits, nights, etc.)
   const isCountKey = (k) =>
     k.includes("days") || k.includes("visits") || k.includes("nights");
 
@@ -163,6 +166,16 @@ function render(p) {
           <span class="meta-label">Holder Type</span>
           <span class="meta-value">${p.policyholder.type}</span>
         </div>
+        ${p.policyholder.industry ? `
+        <div class="meta-item">
+          <span class="meta-label">Industry</span>
+          <span class="meta-value">${p.policyholder.industry}</span>
+        </div>` : ""}
+        ${p.policyholder.employee_count != null ? `
+        <div class="meta-item">
+          <span class="meta-label">Employees</span>
+          <span class="meta-value">${Number(p.policyholder.employee_count).toLocaleString()}</span>
+        </div>` : ""}
       </div>
     </div>
 

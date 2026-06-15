@@ -1,9 +1,9 @@
 {
   "policy_number": "POL-2024-VN-00042",
   "policyholder": {
-    "name": "Mekong Retail Group",
+    "name": "Mekong Retail Group Co., Ltd.",
     "type": "SME",
-    "industry": "Retail",
+    "industry": "Retail & Distribution",
     "employee_count": 48
   },
   "plan": {
@@ -14,7 +14,7 @@
     "currency": "VND"
   },
   "members": {
-    "total": 48,
+    "total": 70,
     "employee": 48,
     "dependent_spouse": 22
   },
@@ -23,19 +23,22 @@
       "type": "INPATIENT",
       "annual_limit": 150000000,
       "sub_benefits": [
-        { "name": "Room & Board",  "limit_per_day": 1200000, "max_days": 60 },
-        { "name": "ICU",           "limit_per_day": 2500000, "max_days": 14 },
-        { "name": "Surgery",       "limit_per_event": 80000000 },
-        { "name": "Ambulance",     "limit_per_event": 2000000 }
+        { "name": "Room & Board",        "limit_per_day": 1200000, "max_days": 60   },
+        { "name": "ICU",                 "limit_per_day": 2500000, "max_days": 14   },
+        { "name": "Surgery",             "limit_per_event": 80000000               },
+        { "name": "Ambulance",           "limit_per_event": 2000000                },
+        { "name": "Post-Op Nursing",     "limit_per_day": 600000,  "max_days": 7   }
       ]
     },
     {
       "type": "OUTPATIENT",
       "annual_limit": 30000000,
       "sub_benefits": [
-        { "name": "Doctor Visit",       "limit_per_visit": 500000,  "visits_per_year": 20 },
-        { "name": "Prescribed Medicine","limit_per_visit": 400000 },
-        { "name": "Diagnostic Tests",   "limit_per_year": 5000000 }
+        { "name": "General Practitioner",  "limit_per_visit": 500000,  "visits_per_year": 20 },
+        { "name": "Specialist Consult",    "limit_per_visit": 1200000, "visits_per_year": 6  },
+        { "name": "Prescribed Medicine",   "limit_per_visit": 400000                         },
+        { "name": "Diagnostic & Lab",      "limit_per_year":  5000000                        },
+        { "name": "Physical Therapy",      "limit_per_visit": 350000,  "visits_per_year": 12 }
       ]
     },
     {
@@ -43,9 +46,22 @@
       "annual_limit": 6000000,
       "waiting_period_days": 60,
       "sub_benefits": [
-        { "name": "Routine Checkup",    "limit_per_year": 2000000 },
-        { "name": "Fillings",           "limit_per_event": 1500000 },
-        { "name": "Extraction",         "limit_per_event": 800000 }
+        { "name": "Routine Checkup & Cleaning", "limit_per_year": 2000000  },
+        { "name": "Fillings",                   "limit_per_event": 1500000 },
+        { "name": "Extraction",                 "limit_per_event": 800000  },
+        { "name": "Root Canal",                 "limit_per_event": 2500000 },
+        { "name": "Dentures & Prosthetics",     "limit_per_year": 3000000  }
+      ]
+    },
+    {
+      "type": "VISION",
+      "annual_limit": 3000000,
+      "waiting_period_days": 30,
+      "sub_benefits": [
+        { "name": "Eye Exam",              "limit_per_year": 500000  },
+        { "name": "Prescription Glasses",  "limit_per_year": 1500000 },
+        { "name": "Contact Lenses",        "limit_per_year": 800000  },
+        { "name": "Laser Eye Surgery",     "lifetime_limit": 15000000 }
       ]
     },
     {
@@ -53,35 +69,53 @@
       "lifetime_limit": 80000000,
       "waiting_period_days": 270,
       "sub_benefits": [
-        { "name": "Normal Delivery",  "limit_per_event": 30000000 },
-        { "name": "C-Section",        "limit_per_event": 55000000 },
-        { "name": "Prenatal Care",    "limit_per_pregnancy": 8000000 },
-        { "name": "Newborn Care",     "limit_per_event": 5000000 }
+        { "name": "Normal Delivery",   "limit_per_event": 30000000    },
+        { "name": "C-Section",         "limit_per_event": 55000000    },
+        { "name": "Prenatal Care",     "limit_per_pregnancy": 8000000 },
+        { "name": "Newborn Care",      "limit_per_event": 5000000     },
+        { "name": "Postnatal Support", "limit_per_pregnancy": 3000000 }
+      ]
+    },
+    {
+      "type": "MENTAL_HEALTH",
+      "annual_limit": 10000000,
+      "waiting_period_days": 90,
+      "sub_benefits": [
+        { "name": "Psychiatrist Consult", "limit_per_visit": 1200000, "visits_per_year": 8  },
+        { "name": "Psychotherapy",        "limit_per_visit": 900000,  "visits_per_year": 12 },
+        { "name": "Inpatient Psychiatric","limit_per_day": 1500000,   "max_days": 10         }
       ]
     },
     {
       "type": "ACCIDENT",
       "annual_limit": 50000000,
       "sub_benefits": [
-        { "name": "Accidental Death",          "limit_per_event": 50000000 },
-        { "name": "Permanent Disability",      "limit_per_event": 50000000 },
-        { "name": "Emergency Medical Expense", "limit_per_event": 10000000 }
+        { "name": "Accidental Death",           "limit_per_event": 50000000 },
+        { "name": "Permanent Total Disability", "limit_per_event": 50000000 },
+        { "name": "Emergency Medical Expense",  "limit_per_event": 10000000 },
+        { "name": "Fracture Indemnity",         "limit_per_event": 5000000  }
       ]
     }
   ],
   "exclusions": [
-    "Pre-existing conditions within first 6 months",
-    "Cosmetic and elective procedures",
+    "Pre-existing conditions within first 6 months of enrolment",
+    "Cosmetic, aesthetic, and purely elective procedures",
     "Self-inflicted injuries and attempted suicide",
-    "Injuries from war, riot, or civil unrest",
-    "Experimental or unproven treatments",
-    "Treatment at non-network facilities without emergency justification"
+    "Injuries arising from war, riot, or civil unrest",
+    "Experimental, unproven, or investigational treatments",
+    "Treatment at non-network facilities without emergency justification",
+    "Infertility investigations and assisted reproduction (IVF, IUI)",
+    "Weight-loss programmes and bariatric surgery",
+    "Non-prescription vitamins, supplements, and over-the-counter drugs"
   ],
   "copay": {
-    "outpatient": { "percentage": 30, "max_per_visit": 200000 },
+    "outpatient": { "percentage": 20, "max_per_visit": 100000 },
     "inpatient":  { "percentage": 10 },
     "dental":     { "percentage": 20 },
-    "accident":   { "percentage": 0 }
+    "vision":     { "fixed_amount": 200000 },
+    "maternity":  { "percentage": 0  },
+    "mental_health": { "percentage": 30, "max_per_visit": 270000 },
+    "accident":   { "percentage": 0  }
   },
   "network": {
     "type": "DIRECT_BILLING",
