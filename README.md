@@ -1,6 +1,6 @@
 # AI Engineering Challenges Submission
 
-This repository contains one submission folder per Pumpkin AI Engineering challenge.
+This repository contains the completed Pumpkin AI Engineering challenge submissions for Challenges 1-5, 7, 8, and 9.
 
 ## Live UI Challenges
 
@@ -14,7 +14,6 @@ Deploy these folders as static pages through GitHub Pages, Netlify, Vercel, or a
 | 5         | `Challenge_5/`  | Policy summary generator; open through a static server                |
 | 7         | `Challenge_7/`  | Claims intake wizard                                                  |
 | 9         | `Challenge_9/`  | Claims analytics dashboard; includes `claims.csv`                     |
-| 15        | `Challenge_15/` | Multi-tenant admin UI; open through a static server                   |
 
 GitHub Pages URLs:
 
@@ -25,7 +24,6 @@ https://19anim.github.io/ai-engineering-challenges/Challenge_4/
 https://19anim.github.io/ai-engineering-challenges/Challenge_5/
 https://19anim.github.io/ai-engineering-challenges/Challenge_7/
 https://19anim.github.io/ai-engineering-challenges/Challenge_9/
-https://19anim.github.io/ai-engineering-challenges/Challenge_15/
 ```
 
 ## Artifact-Only Challenges
@@ -35,13 +33,7 @@ These challenges are submitted as source code, generated outputs, tests, and wri
 | Challenge | Folder          | Primary verification                      |
 | --------- | --------------- | ----------------------------------------- |
 | 2         | `Challenge_2/`  | `python clean_data.py`                    |
-| 6         | `Challenge_6/`  | `python -m unittest test_calculator.py`   |
 | 8         | `Challenge_8/`  | `python -m unittest test_extractor.py`    |
-| 10        | `Challenge_10/` | `python -m unittest test_fraud_engine.py` |
-| 11        | `Challenge_11/` | `python -m unittest test_agent.py`        |
-| 12        | `Challenge_12/` | `python -m unittest test_rule_engine.py`  |
-| 13        | `Challenge_13/` | `npm.cmd run build && npm.cmd test`       |
-| 14        | `Challenge_14/` | `python -m unittest test_workflow.py`     |
 
 ## Local Static Server
 
